@@ -16,7 +16,7 @@
 13. Crear un nuevo test: codeceptjs generate:test (responder con el nombre y el feature)/codeceptjs gt
 14. Proveer el autocompletado en codeceptjs agregar el contenido a steps.d.ts
 15. Ejecutar yarn run test
-16. Ejecutar codeceptjs gpo para crear en modo page object
+16. Ejecutar codeceptjs gpo para crear en modo page object.
 
 
       "seleniumAddress": "http://34.210.58.173:4444/wd/hub"
