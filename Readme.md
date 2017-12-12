@@ -14,7 +14,7 @@
 11. Instalar el directorio node_modules: yarn install 
 12. Descargar e Instalar visual code: https://code.visualstudio.com/docs/?dv=win
 13. Crear un nuevo test: codeceptjs gt (responder con el nombre y el feature)
-14. Proveer el autocompletado en codeceptjs completando el contenido a steps.d.ts
+14. Proveer el autocompletado al contenido del archivo steps.d.ts
 15. Ejecutar una prueba: yarn run test
 16. Para crear en modo page object usar: codeceptjs gpo
 ***
