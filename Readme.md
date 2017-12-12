@@ -1,5 +1,5 @@
 
-##PASOS PARA INSTALAR
+*PASOS PARA INSTALAR*
       
 1. Descargar e Instalar nodejs: https://nodejs.org/en/ 
 2. Descargar e Instalar yarn: https://yarnpkg.com/en/docs/install
