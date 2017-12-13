@@ -11,7 +11,7 @@
 8. Inicializar y crear el codecept json: codeceptjs init (aceptar con enter y elegir SeleniumWebDriver)
 9. Inicializa y crea el package json: npm init 
 10. Descargar e Instalar visual code: https://code.visualstudio.com/docs/?dv=win
-11. Adicionar configuración con lo necesario de package json y codecept json*
+11. Adicionar configuración con lo necesario de package.json y codecept.json*
 12. Instalar el directorio node_modules: yarn install 
 13. Crear un nuevo test: codeceptjs gt (responder con el nombre y el feature)
 14. Proveer el autocompletado al contenido del archivo steps.d.ts
