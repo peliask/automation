@@ -15,6 +15,7 @@
 11. Adicionar configuración con lo necesario de codecept.json y package.json
 
 *codecept.json*
+
 ```json
 {
   "tests": "./*_test.js",
