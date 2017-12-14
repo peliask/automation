@@ -13,7 +13,7 @@
 10. Descargar e Instalar visual code: https://code.visualstudio.com/docs/?dv=win
 11. Adicionar configuración con lo necesario de codecept.json y package.json
 
-**codecept.json**
+*codecept.json*
 
 {
   "tests": "./*_test.js",
@@ -55,7 +55,7 @@
   "name": "automation"
 }
 
-**package.json**
+*package.json*
 
 {
   "name": "automation",
