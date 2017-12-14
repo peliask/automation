@@ -1,6 +1,7 @@
 
 *PASOS PARA INSTALAR*
-      
+
+***      
 1. Descargar e Instalar nodejs: https://nodejs.org/en/ 
 2. Descargar e Instalar yarn: https://yarnpkg.com/en/docs/install
 3. Ingresar a la ventana de comandos cmd y verificar la instalación: yarn --version
@@ -14,11 +15,9 @@
 11. Adicionar configuración con lo necesario de codecept.json y package.json
 
 *codecept.json*
-
+```json
 {
-      
   "tests": "./*_test.js",
-
   "timeout": 10000,
   "output": "./output",
   "helpers": {
@@ -56,9 +55,10 @@
   },
   "name": "automation"
 }
-
+```
 *package.json*
 
+```json
 {
   "name": "automation",
   "version": "1.0.0",
@@ -82,12 +82,9 @@
     "webdriverio": "^4.8.0"
   }
 }
-
+```
 12. Instalar el directorio node_modules: yarn install 
 13. Crear un nuevo test: codeceptjs gt (responder con el nombre y el feature)
 14. Proveer el autocompletado al contenido del archivo steps.d.ts
 15. Ejecutar una prueba: yarn run test
 16. Para crear en modo page object usar: codeceptjs gpo
-***
-
-      "seleniumAddress": "http://34.210.58.173:4444/wd/hub"
