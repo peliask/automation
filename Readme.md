@@ -164,5 +164,5 @@ declare module "codeceptjs" {
     export = CodeceptJS;
 }
 ```
-15. Ejecutar una prueba: yarn run test
+15. Ejecutar una prueba del tipo "login" indicado en el grep: yarn run test
 16. Para crear en modo page object usar: codeceptjs gpo
