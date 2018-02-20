@@ -2,7 +2,7 @@
 Feature('Login');
 
 Scenario('Registered user should login to SB Chile and logout', (I) => {
-    I.say('I want to login to SomosBelcorp Chile');
+     I.say('I want to login to SomosBelcorp Chile');
     I.amOnPage('/');
     I.wait(2);
     I.see('¡Bienvenida');
@@ -11,6 +11,7 @@ Scenario('Registered user should login to SB Chile and logout', (I) => {
     I.fillField('CodigoUsuario','usuariopruebacl');
     I.fillField('ClaveSecreta','1234567');
     I.click('#btnLogin');
+     I.wait(2);
     I.amOnPage('/Bienvenida');
     I.wait(2);
     I.click('//*[@id="PopShowroomVenta"]/div/a/img');
@@ -23,5 +24,5 @@ Scenario('Registered user should login to SB Bolivia and logout', (I,generalPage
 });
 
 Scenario('Registered user should login to SB Perú and logout', (I,generalPage) => {
-    generalPage.sendForm('PE','usuariopruebape','1234567');
+    generalPage.sendForm1('PE','usuariopruebape','1234567');
 });
