@@ -171,13 +171,15 @@ declare module "codeceptjs" {
 *Usando Puppeteer*
 
 ***    
-Pre requisitos debes tener instalado git node npm yarn
+Pre requisitos debes tener instalado git node npm yarn:
+
 Git https://git-scm.com/download/win
 nodejs: https://nodejs.org/en/
 yarn: https://yarnpkg.com/en/docs/install
 Gestor de código Visual code: https://code.visualstudio.com/docs/?dv=win
 
 Crea una carpeta del proyecto, abre el git bash y verifica la instalación: 
+
 <micarpeta>yarn --version
 
 Ejecuta los siguientes comandos: (i = install)
@@ -187,19 +189,17 @@ npm i -g codeceptjs   (Instala codeceptjs)
 npm i -g puppeteer@^1.0.0 
 npm i -g mocha@* 
 npm i -g mochawesome-report-generator 
---npm i -g mochawesome
+npm i -g mochawesome
 
 npm i codeceptjs-puppeteer
 
 Inicializar y crear el codecept json: 
 codeceptjs init (acepta con enter y elige el Helper de tu preferencia, para este caso puppeteer)
 
-Inicializa y crea el package json: 
-npm init
+Configurar codecept.json:
 
-Configurar codecept.json y package.json:
-------
 codeceptjs.json
+```json
 {
   "tests": "./*_test.js",
   "timeout": 10000,
@@ -222,8 +222,13 @@ codeceptjs.json
   },
   "name": "TestAutomation"
 }
-------
+```
+
+Inicializa y crea el package json: 
+npm init
+
 package.json
+```json
 {
   "name": "testautomation",
   "version": "1.0.0",
@@ -246,15 +251,18 @@ package.json
   "author": "Pris",
   "license": "ISC"
 }
+```
 
 Instalar las dependencias: 
 yarn install
+
 Generar el standar type definition: 
 codeceptjs def
+
 Crear un nuevo test: 
 codeceptjs gt (responder con el nombre y el feature)
 
-
+```js
 Scenario('PE Login Agregar Pedido', (I) => {
     I.say('Realizar login');
     I.amOnPage('/');
@@ -275,7 +283,9 @@ Scenario('PE Login Agregar Pedido', (I) => {
     I.click('#lnk-sup-cerrar-sesion');
     I.wait(2);
 });
-
+```
 Ejecutar la prueba con: 
-yarn run test
+yarn run test 
+o
 codeceptjs run --reporter mochawesome
+
