@@ -166,3 +166,116 @@ declare module "codeceptjs" {
 ```
 15. Ejecutar una prueba del tipo "login" indicado en el grep: yarn run test
 16. Para crear en modo page object usar: codeceptjs gpo
+
+
+*Usando Puppeteer*
+
+***    
+Pre requisitos debes tener instalado git node npm yarn
+Git https://git-scm.com/download/win
+nodejs: https://nodejs.org/en/
+yarn: https://yarnpkg.com/en/docs/install
+Gestor de código Visual code: https://code.visualstudio.com/docs/?dv=win
+
+Crea una carpeta del proyecto, abre el git bash y verifica la instalación: 
+<micarpeta>yarn --version
+
+Ejecuta los siguientes comandos: (i = install)
+
+npm i npm@latest -g   (Instala la última versión actualizada de npm)
+npm i -g codeceptjs   (Instala codeceptjs)
+npm i -g puppeteer@^1.0.0 
+npm i -g mocha@* 
+npm i -g mochawesome-report-generator 
+--npm i -g mochawesome
+
+npm i codeceptjs-puppeteer
+
+Inicializar y crear el codecept json: 
+codeceptjs init (acepta con enter y elige el Helper de tu preferencia, para este caso puppeteer)
+
+Inicializa y crea el package json: 
+npm init
+
+Configurar codecept.json y package.json:
+------
+codeceptjs.json
+{
+  "tests": "./*_test.js",
+  "timeout": 10000,
+  "output": "./output",
+  "helpers": {
+    "Puppeteer": {
+      "url": "https://www.somosbelcorp.com",
+      "show": true
+    },
+    "Mochawesome": {}
+  },
+  "include": {
+    "I": "./steps_file.js"
+  },
+  "bootstrap": false,
+  "mocha": {
+    "reporterOptions": {
+      "reportDir": "./output/"
+    }
+  },
+  "name": "TestAutomation"
+}
+------
+package.json
+{
+  "name": "testautomation",
+  "version": "1.0.0",
+  "description": "Test Automation",
+  "main": "index.js",
+  "dependencies": {
+    "codeceptjs-puppeteer": "^1.1.0"
+  },
+  "devDependencies": {
+    "codeceptjs": "^1.1.6",
+    "puppeteer": "^1.0.0",
+    "codeceptjs-puppeteer": "*",
+    "mocha": "*",
+    "mochawesome-report-generator": "*",
+    "mochawesome": "^2.3.1"
+  },
+  "scripts": {
+    "test": "codeceptjs run --reporter mochawesome"
+  },
+  "author": "Pris",
+  "license": "ISC"
+}
+
+Instalar las dependencias: 
+yarn install
+Generar el standar type definition: 
+codeceptjs def
+Crear un nuevo test: 
+codeceptjs gt (responder con el nombre y el feature)
+
+
+Scenario('PE Login Agregar Pedido', (I) => {
+    I.say('Realizar login');
+    I.amOnPage('/');
+    I.see('¡Bienvenida');
+    I.resizeWindow(1024,780);
+    I.selectOption('CodigoISO', 'PE'); //name
+    I.wait(2);
+    I.fillField('CodigoUsuario','usuariopruebape');
+    I.fillField('ClaveSecreta','1234567');
+    I.click('#btnLogin'); //selector
+    I.wait(2);
+    I.amOnPage('/Bienvenida');
+    I.wait(2);
+    I.pressKey('Escape');
+    I.wait(2);
+    I.see('EL CIERRE ES');
+    I.see('MI ESTADO DE CUENTA');
+    I.click('#lnk-sup-cerrar-sesion');
+    I.wait(2);
+});
+
+Ejecutar la prueba con: 
+yarn run test
+codeceptjs run --reporter mochawesome
