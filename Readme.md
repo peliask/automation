@@ -173,28 +173,28 @@ declare module "codeceptjs" {
 ***    
 Pre requisitos debes tener instalado git node npm yarn:
 
-Git https://git-scm.com/download/win
-nodejs: https://nodejs.org/en/
-yarn: https://yarnpkg.com/en/docs/install
-Gestor de código Visual code: https://code.visualstudio.com/docs/?dv=win
+1. Git https://git-scm.com/download/win
+2. nodejs: https://nodejs.org/en/
+3. yarn: https://yarnpkg.com/en/docs/install
+4. Gestor de código Visual code: https://code.visualstudio.com/docs/?dv=win
 
 Crea una carpeta del proyecto, abre el git bash y verifica la instalación: 
 
 <micarpeta>yarn --version
 
-Ejecuta los siguientes comandos: (i = install)
+Ejecuta los siguientes comandos: 
 
-npm i npm@latest -g   (Instala la última versión actualizada de npm)
-npm i -g codeceptjs   (Instala codeceptjs)
-npm i -g puppeteer@^1.0.0 
-npm i -g mocha@* 
-npm i -g mochawesome-report-generator 
-npm i -g mochawesome
-
-npm i codeceptjs-puppeteer
+1. npm i npm@latest -g   (Instala la última versión actualizada de npm)
+2. npm i -g codeceptjs   (Instala codeceptjs)
+3. npm i -g puppeteer@^1.0.0 
+4. npm i -g mocha@* 
+5. npm i -g mochawesome-report-generator 
+6. npm i -g mochawesome
+7. npm i codeceptjs-puppeteer
 
 Inicializar y crear el codecept json: 
 codeceptjs init (acepta con enter y elige el Helper de tu preferencia, para este caso puppeteer)
+
 
 Configurar codecept.json:
 
@@ -286,6 +286,7 @@ Scenario('PE Login Agregar Pedido', (I) => {
 ```
 Ejecutar la prueba con: 
 yarn run test 
+
 o
 codeceptjs run --reporter mochawesome
 
