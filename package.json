@@ -7,17 +7,15 @@
   "private": true,
   "scripts": {
     "clean": "rimraf output",
-    "test": "rimraf output & codeceptjs run --grep login --reporter mocha-multi"
+    "test": "rimraf output & codeceptjs run --grep login --reporter mochawesome"
   },
   "devDependencies": {
-    "codeceptjs": "^1.0.3",
-    "mocha-junit-reporter": "^1.15.0",
-    "mocha-multi": "^0.11.1",
+    "codeceptjs": "^1.1.6",
+    "puppeteer": "^1.0.0",
+    "codeceptjs-puppeteer": "*",
+    "mocha": "*",
+    "mochawesome-report-generator": "*",
     "mochawesome": "^2.3.1",
-    "nightmare": "^2.10.0",
-    "nightmare-upload": "^0.1.1",
-    "rimraf": "^2.6.2",
-    "selenium-webdriver": "^3.6.0",
-    "webdriverio": "^4.8.0"
+    "rimraf": "^2.6.2"
   }
 }

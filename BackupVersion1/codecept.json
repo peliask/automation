@@ -1,0 +1,43 @@
+{
+  "tests": "./*_test.js",
+  "timeout": 10000,
+  "output": "./output",
+  "helpers": {
+    "Puppeteer": {
+      "url": "https://www.somosbelcorp.com/",
+      "browser": "chrome",
+      "uniqueScreenshotNames": true,
+      "angular": false
+      
+    }
+
+  },"Mochawesome": {
+      "uniqueScreenshotNames": true,
+      "disableScreenshots": false
+    },
+  "include": {
+    "I": "./steps_file.js",
+    "generalPage": "./pages/general.js"
+  },
+  "bootstrap": false,
+  "mocha": {
+    "reporterOptions": {
+      "codeceptjs-cli-reporter": {
+        "stdout": "-",
+        "options": {
+          "verbose": true,
+          "steps": true
+        }
+      },
+      "reportDir": "./output/",
+      "mochawesome": {
+       "stdout": "./output/console.log",
+       "options": {
+         "reportDir": "./output",
+         "reportFilename": "index"
+        }
+      }
+    }
+  },
+  "name": "automation"
+}
